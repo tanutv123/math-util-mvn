@@ -14,17 +14,27 @@ package com.tanutv123.mathutil.core;
 public class MathUtility {
     
     
+//    public static long getFactorial(int n) {
+//        if(n < 0 || n > 20) {
+//            throw new IllegalArgumentException("Invalid n. n must be between 0 to 20. Plz");
+//        }
+//        if(n==0 || n ==1) {
+//            return 1;
+//        }
+//        long product = 1;
+//        for(int i = 2; i <= n ; i++) {
+//            product *= i;
+//        }
+//        return product;
+//    }
     public static long getFactorial(int n) {
-        if(n < 0 || n > 20) {
-            throw new IllegalArgumentException("Invalid n. n must be between 0 to 20. Plz");
+        if(n<0 || n > 20) {
+            throw new IllegalArgumentException("Lam on hay co tam voi app");
         }
-        if(n==0 || n ==1) {
+        
+        if(n == 1 || n == 0) {
             return 1;
         }
-        long product = 1;
-        for(int i = 2; i <= n ; i++) {
-            product *= i;
-        }
-        return product;
+        return n * getFactorial(n-1);
     }
 }
