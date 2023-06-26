@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
   steps:
-  - uses: actions/checkout@v3
+  - name: Check-out repository # Lấy code từ kho thảy vào máy ảo của GitHub chuẩn bị build ở bước sau
+    uses: actions/checkout@v3
   - name: Set up JDK 20 - Mượn JDK và cài vào Server Ubuntu của Mỹ mà GitHub tạm cho mượn
     uses: actions/setup-java@v3
     with:
